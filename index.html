@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>CV Fedchenko M</title>
 </head>
@@ -12,15 +15,53 @@
 <body>
     <div class="wrapper">
         <div class="_container">
-            <header class='header header__header'>
-                <h1>Fedchenko Mikhail Vladimirovich CV</h1>
-                <h2>Junior frontend developer</h2>
+            <header class='header'>
+                <nav class="header__nav">
+                    <ul>
+                        <li class="header__item">Contacts</li>
+                        <li class="header__item">About me</li>
+                        <li class="header__item">Skills</li>
+                        <li class="header__item">Education</li>
+                        <li class="header__item">My code</li>
+                    </ul>
+                </nav>
+                <div class="header__header">
+                    <h1>Fedchenko Mikhail Vladimirovich CV</h1>
+                    <h2>Junior frontend developer</h2>
+                </div>
             </header>
             <div class="content-container">
                 <aside class="content-sidebar">
                     <img src="/assets/img/thisIsIAm.jpg" alt="thisIsIAm">
+                    <section class="contacts">
+                        <ul class="contacts__list">
+                            <li class='contacts__item'><img src="/assets/img/phone-svgrepo-com.svg" alt="Phone">
+                                +7 (999) 545-72-95
+                            </li>
+                            <li class='contacts__item'><a href="mailto:fedchenko.mike@gmail.com"><img
+                                        src="/assets/img/email-svgrepo-com.svg" alt="Email">
+                                    fedchenko.mike@gmail.com</a>
+                            </li>
+                            <li class='contacts__item'><img src="/assets/img/telegram-svgrepo-com.svg" alt="telegram">
+                                @FedchenkoMike
+                            </li>
+                            <li class='contacts__item'><a href="https://github.com/FedchenkoM" target="blank"><img
+                                        src="/assets/img/github-svgrepo-com.svg" alt="Github">FedchenkoM</a></li>
+                            <li class='contacts__item'><a href="https://vk.com/cuisinerock" target="blank"><img
+                                        src="/assets/img/vk-svgrepo-com.svg" alt="VK">VK</a></li>
+                        </ul>
+                    </section>
                 </aside>
                 <main class="content-main">
+                    <section class="about-me">
+                        <h2 class="about-me__title title">About me</h2>
+                        <p>Hey! My name is Mikhail, I was born in 1990 and I dream of becoming a software engineer.<br>
+                            I have worked in many areas. For example, I was a chef, made medicines and even worked in a factory. But never felt as good as when I write code.<br>
+                            Something I already know, but I have to learn even more. This is one of the reasons why I like coding.<br>
+                            I am a friendly and calm person who confidently goes to his goal no matter what he does.<br>
+                            I hope to find my team so that I can develop, benefit the team and humanity.
+                        </p>
+                    </section>
                 </main>
             </div>
 
