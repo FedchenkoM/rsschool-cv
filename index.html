@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <title>CV Fedchenko M</title>
 </head>
 
@@ -16,15 +20,29 @@
     <div class="wrapper">
         <div class="_container">
             <header class='header'>
-                <nav class="header__nav">
-                    <ul>
-                        <li class="header__item">Contacts</li>
-                        <li class="header__item">About me</li>
-                        <li class="header__item">Skills</li>
-                        <li class="header__item">Education</li>
-                        <li class="header__item">My code</li>
-                    </ul>
-                </nav>
+                <div class="header__menu">
+                    <div class="header__burger">
+                        <img src="/assets/img/burger-svgrepo-com.svg" alt="menu">
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header-ul">
+                            <li class="header__item"><a href="#contacts">Contacts</a></li>
+                            <li class="header__item"><a href="#about">About me</a></li>
+                            <li class="header__item"><a href="#skills">Skills</a></li>
+                            <li class="header__item"><a href="#education">Education</a></li>
+                            <li class="header__item"><a href="#code">Code</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="header__adaptive">
+                        <ul class="header-ul">
+                            <li class="header__item"><a href="#contacts">Contacts</a></li>
+                            <li class="header__item"><a href="#about">About me</a></li>
+                            <li class="header__item"><a href="#skills">Skills</a></li>
+                            <li class="header__item"><a href="#education">Education</a></li>
+                            <li class="header__item"><a href="#code">Code</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="header__header">
                     <h1>Fedchenko Mikhail Vladimirovich CV</h1>
                     <h2>Junior frontend developer</h2>
@@ -32,9 +50,9 @@
             </header>
             <div class="content-container">
                 <aside class="content-sidebar">
-                    <img src="/assets/img/thisIsIAm.jpg" alt="thisIsIAm">
-                    <section class="contacts">
-                        <ul class="contacts__list">
+                    <img class="sidebar__img" src="/assets/img/thisIsIAm.jpg" alt="thisIsIAm">
+                    <div class="contacts">
+                        <ul class="contacts__list" id="contacts">
                             <li class='contacts__item'><img src="/assets/img/phone-svgrepo-com.svg" alt="Phone">
                                 +7 (999) 545-72-95
                             </li>
@@ -50,25 +68,89 @@
                             <li class='contacts__item'><a href="https://vk.com/cuisinerock" target="blank"><img
                                         src="/assets/img/vk-svgrepo-com.svg" alt="VK">VK</a></li>
                         </ul>
-                    </section>
+                    </div>
                 </aside>
                 <main class="content-main">
-                    <section class="about-me">
+                    <section class="about-me" id="about">
                         <h2 class="about-me__title title">About me</h2>
                         <p>Hey! My name is Mikhail, I was born in 1990 and I dream of becoming a software engineer.<br>
-                            I have worked in many areas. For example, I was a chef, made medicines and even worked in a factory. But never felt as good as when I write code.<br>
-                            Something I already know, but I have to learn even more. This is one of the reasons why I like coding.<br>
+                            I have worked in many areas. For example, I was a chef, made medicines and even worked in a
+                            factory. But never felt as good as when I write code.<br>
+                            Something I already know, but I have to learn even more. This is one of the reasons why I
+                            like coding.<br>
                             I am a friendly and calm person who confidently goes to his goal no matter what he does.<br>
                             I hope to find my team so that I can develop, benefit the team and humanity.
                         </p>
                     </section>
+                    <section class="skills" id='skills'>
+                        <h2 class="skills__title title">Skills & tools</h2>
+                        <ul>
+                            <li>
+                                <p><b>Computer science</b> (Algorithms, data structures, networking, windows, hardware)
+                                </p>
+                            </li>
+                            <li>
+                                <p><b>JavaScript</b> (ES6, data structures, methods, OOP)</p>
+                            </li>
+                            <li>
+                                <p><b>React / redux</b> (Beginner level)</p>
+                            </li>
+                            <li>
+                                <p><b>HTML / CSS / SASS / SCSS</b> (Flexbox, grid layout, BEM, semantic layout, pixel
+                                    perfect)</p>
+                            </li>
+                            <li>
+                                <p><b>Terminal</b></p>
+                            </li>
+                            <li>
+                                <p><b>GIT / Github</b></p>
+                            </li>
+                            <li>
+                                <p><b>Figma</b></p>
+                            </li>
+                            <li>
+                                <p><b>Visual studio code</b></p>
+                            </li>
+                            <li>
+                                <p><b>Chrome dev tools</b></p>
+                            </li>
+                            <li>
+                                <p><b>W3C</b></p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="education" id='education'>
+                        <h2 class="education title">Education</h2>
+                    </section>
+                    <article class="main-code" id="code">
+                        <h2 class="code__title title">Code</h2>
+<pre class="code-light"><code>
+function indexEqualsValue(a) {
+
+let srt = 0;
+let end = a.length - 1
+let result = -1
+
+while(start &lt; end){
+let mid = Math.floor((srt+end)/2)
+if(a[mid] >= mid){
+if(a[mid] == mid){
+result = mid
+}
+end = mid - 1
+} else if(a[mid] &lt; mid){
+srt = mid + 1
+}
+}
+return result
+}
+</code></pre>
+                    </article>
                 </main>
             </div>
-
-
         </div>
     </div>
-
+    <script src="/script.js"></script>
 </body>
 
 </html>
