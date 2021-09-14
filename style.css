@@ -70,23 +70,19 @@ html, body {
 
 .header__menu {
     display: flex;
+    flex-direction: row;
+    flex: 0 2 auto;
+    font-size: 140%;
     align-items: flex-start;
 }
 .header__header {
     display: flex;
     flex-direction: column;
-    flex: 4 0 50%;
 }
-
 
 .header__header h1,h2 {
     line-height: 125%;
     font-size: 220%;
-}
-
-.header__nav {
-    display: flex;
-    /* flex-wrap: wrap; */
 }
 
 .header__nav ul {
@@ -100,7 +96,7 @@ html, body {
 .header__item {
     font-size: 125%;
     cursor: pointer;
-    margin:6px 13px 6px 0;
+    margin:6px 10px 6px 0;
 }
 
 .header__item:hover {
@@ -111,8 +107,10 @@ html, body {
 .header__burger {
     display: none;
     min-width: 50px;
+    position: absolute;
     margin-right: 10px;
     cursor: pointer;
+    z-index: 3;
 }
 
 .header__burger:active {
@@ -121,28 +119,38 @@ html, body {
 }
 
 .header__adaptive {
-    display: flex;
+    display: none;
     text-align: left;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 130%;
-    z-index: 5;
-    width: 100%;
-    transform: translate(0,-150%);
-    transition: all 0.5s ease-in;
+    position: absolute;
+    color: black;
+    border-radius: 5px;
+    padding: 3px 0 3px 55px;
+    opacity: 0.8;
+    z-index: 2;
+    background-color: darkorange;
+    font-size: 150%;
+    font-weight: 900;
+}
+.header__adaptive .header__item:hover {
+    color:greenyellow;
 }
 
 @media screen and (max-width: 768px) {
     .header__nav {
         display: none;
     }
+    .header__menu {
+        flex-direction: column;
+    }
     .header__burger {
         display: flex;
+    }
+    .header__header {
+        margin-left: 50px;
     }
 }
 .burger_active {
     display: block;
-    transform: translate(0);
 }
 
 @media screen and (min-width: 768px){
@@ -151,13 +159,6 @@ html, body {
     }
 }
 
-@media screen and (max-width:350px) {
-    .header__menu {
-        flex-direction: column;
-        font-size: 140%;
-    }
-
-}
 
 /* ----------------------------Content--------------------------------- */
 .content-container {
@@ -257,7 +258,6 @@ code {
 
 }
 
-
 @media screen and (max-width: 1000px) {
     .content-main{
         flex: 1 1 100%;
@@ -265,4 +265,18 @@ code {
     .about-me {
         padding:0 6px;
     }
+}
+
+.education__item {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 150%;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    /* padding: 10px; */
+    border-radius: 10px;
+    height: 50px;
+    background-color: rgb(51, 50, 50);
 }
