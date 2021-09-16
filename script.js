@@ -5,5 +5,5 @@ headerBurger.addEventListener('click', adaptiveBurgerCtrl)
 
 function adaptiveBurgerCtrl() {
     headerBurgerMenu.classList.toggle('burger_active')
-    console.log('sss');
+
 }   

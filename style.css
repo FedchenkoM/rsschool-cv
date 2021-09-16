@@ -111,11 +111,12 @@ html, body {
     margin-right: 10px;
     cursor: pointer;
     z-index: 3;
+    padding-top: 4px;
+    transition: all 0.3s ease-out;
 }
 
 .header__burger:active {
-    transform: rotate(90deg);
-    transition: all 0.1s ease-in;
+    transform:scale3d(0.9, 1.4, 0.7 );
 }
 
 .header__adaptive {
@@ -181,7 +182,6 @@ html, body {
 
 .contacts {
     padding: 8px;
-    height: 100%;
     background-color:  rgb(44, 43, 43);
 }   
 
@@ -269,14 +269,85 @@ code {
 
 .education__item {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     font-size: 150%;
     width: 100%;
     padding: 5px;
     margin-bottom: 5px;
-    align-items: center;
-    /* padding: 10px; */
-    border-radius: 10px;
-    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    height: auto    ;
     background-color: rgb(51, 50, 50);
 }
+
+.education__item p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* ----------------------------Portfolio-------------------------- */
+.main-portfolio {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-content {
+    display: flex;
+    padding-bottom: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.portfolio-content figure {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+    background-color:rgb(37, 37, 37);
+    border-radius: 5px;
+    padding: 10px;
+}
+.portfolio-content img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.portfolio-content figure:hover {
+    background-color:rgb(71, 71, 71);
+    transition: all 0.1s ease-in;
+}
+
+@media screen and (max-width:450px) {
+    .portfolio-content figure {
+        width: 100%;
+        background-color:rgb(37, 37, 37);
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+
+/* ---------------footer------------------ */
+
+.footer {
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 14px;
+}
+
+.footer img {
+    width: 50px;
+}
+
+.footer a:hover {
+    cursor: pointer;
+    transform: scale3d(1.2,1.2,1.2);
+    transition: all 0.1s ease-in;
+}
+
+
+
